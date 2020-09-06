@@ -8,12 +8,12 @@ public class AgentManager : MonoBehaviour
 
     void Start()
     {
+        // Load Agent assets
         AgentLibrary.LoadAgentLibrary();
 
         ActiveAgents = new List<Agent>();
 
-        SpawnAgent(AgentLibrary.Grub);
-       
+        SpawnAgent(AgentLibrary.Grub);     
     }
 
     public void SpawnAgent(AgentType agent)

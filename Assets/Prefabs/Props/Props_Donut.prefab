@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8914695812935181855}
   - component: {fileID: 480171802982682873}
   - component: {fileID: 2512891543761303870}
+  - component: {fileID: 6335621900995895225}
   m_Layer: 0
   m_Name: Props_Donut
   m_TagString: Untagged
@@ -79,3 +80,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6335621900995895225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539658701792926231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7b7084928ccbc4396ffc826ed3f36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: 1
+  biomass: 1
+  weight: 0.5

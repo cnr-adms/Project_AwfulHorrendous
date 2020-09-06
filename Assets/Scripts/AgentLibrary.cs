@@ -16,14 +16,12 @@ public static class AgentLibrary
 public class AgentType
 {
     public GameObject agentGameObject;
-    public Agent agent;
 
     public AgentType(GameObject agentGameObject)
     {
         if (agentGameObject)
         {
             this.agentGameObject = agentGameObject;
-            agent = agentGameObject.GetComponent<Agent>();
         }
         else
             Debug.LogWarning("Agent Library: Agent Prefab not found.");
