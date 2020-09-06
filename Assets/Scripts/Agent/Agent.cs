@@ -15,4 +15,9 @@ public class Agent : MonoBehaviour
     {
         // trigger new move request
     }
+
+    public void PickupProp(Prop prop)
+    {
+        // Prop pickup logic
+    }
 }
