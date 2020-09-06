@@ -8,14 +8,18 @@ public class AgentManager : MonoBehaviour
 
     void Start()
     {
+        AgentLibrary.LoadAgentLibrary();
+
         ActiveAgents = new List<Agent>();
 
-        Agent newAgent = new Agent();
-        SpawnAgent(newAgent);
+        SpawnAgent(AgentLibrary.Grub);
+       
     }
 
-    public void SpawnAgent(Agent agent)
+    public void SpawnAgent(AgentType agent)
     {
-        ActiveAgents.Add(agent);
+        var newAgentGO = Instantiate<GameObject>(agent.agentGameObject, Vector3.zero, Quaternion.identity, this.transform);
+        Agent newAgent = newAgentGO.GetComponent<Agent>();
+        ActiveAgents.Add(newAgent);
     }
 }

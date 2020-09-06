@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AgentLibrary : MonoBehaviour
+public static class AgentLibrary
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static AgentType Grub;
 
-    // Update is called once per frame
-    void Update()
+    public static void LoadAgentLibrary()
     {
-        
+        Grub = new AgentType(Resources.Load
+            ("Grub", typeof(GameObject)) as GameObject);
+    }
+}
+
+public class AgentType
+{
+    public GameObject agentGameObject;
+    public Agent agent;
+
+    public AgentType(GameObject agentGameObject)
+    {
+        if (agentGameObject)
+        {
+            this.agentGameObject = agentGameObject;
+            agent = agentGameObject.GetComponent<Agent>();
+        }
+        else
+            Debug.LogWarning("Agent Library: Agent Prefab not found.");
     }
 }
