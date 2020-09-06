@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Stores all Agent types for use in spawning
 public static class AgentLibrary
 {
     public static AgentType Grub;
